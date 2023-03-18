@@ -1,3 +1,4 @@
+
 // Card Collapse
 const infoCardHeaders = document.querySelectorAll('.info_card_header');
 
@@ -17,3 +18,14 @@ infoCardHeaders.forEach((infoCardHeader) => {
     }
   });
 });
+
+// Menu toggler
+const menu = document.getElementById('toggle')
+    menu.addEventListener('click', (e) => {
+        const activeNav = document.querySelector('.nav-nav');
+        if(activeNav.classList.contains('activeMenu')) {
+        activeNav.classList.remove('activeMenu');
+        activeNav.classList.add('nav-nav')
+        } else { activeNav.classList.add('activeMenu'); }
+    });
+
